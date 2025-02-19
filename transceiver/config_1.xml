@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<wind>	
+	<logging level="INFO" />	
+	
+	<pipelines>				
+		<pipeline enabled="false" >
+			<in  type="ros" direction="i" port="4400" logging="B,H,P,N" >                        
+                            <rate_limit messages_per_second="10"   />
+                        </in>
+						
+			<out type="ros" direction="indication" address="localhost" port="2009" logging="B,H,P,N">                        
+                            <cpm_fragmenter>
+                                <perceived_objects_per_message>30</perceived_objects_per_message>
+                            </cpm_fragmenter>
+                        </out>
+		</pipeline>				
+		
+		<pipeline enabled="true">
+			<in  type="ros" port="1111" logging="B,N,P"  />
+			<out type="ros" address="localhost" port="3333" logging="B,H,P,N"/>
+		</pipeline>
+	</pipelines>
+
+</wind>
