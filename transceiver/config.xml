@@ -4,7 +4,7 @@
 	
 	<pipelines>				
 		<pipeline>
-			<in  type="ros" direction="i" port="4400" logging="B,H,P,N" >                        
+			<in  type="ros" direction="i" port="1112" logging="B,H,P,N" >                        
                             <rate_limit messages_per_second="100"   />
                         </in>
 						
@@ -13,6 +13,7 @@
                                 <perceived_objects_per_message>30</perceived_objects_per_message>
                             </cpm_fragmenter>-->
                         </out>
+			<out type="ros" direction="in" port="3333" logging="" />
 		</pipeline>				
 		
 		<pipeline enabled="false">

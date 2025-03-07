@@ -17,7 +17,7 @@
 		
 		<pipeline enabled="true">
 			<in  type="ros" port="1111" logging="B,N,P"  />
-			<out type="ros" address="localhost" port="3333" logging="B,H,P,N"/>
+			<out type="ros" address="localhost" port="4444" logging="B,H,P,N"/>
 		</pipeline>
 	</pipelines>
 
