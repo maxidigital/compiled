@@ -4,7 +4,7 @@
 	
 	<pipelines>				
 		<pipeline>
-			<in  type="ros" direction="i" port="1112" logging="B,H,P,N" >                        
+			<in  type="cohda" direction="i" port="4402" logging="B,H,P,N" >                        
                             <rate_limit messages_per_second="100"   />
                         </in>
 						
